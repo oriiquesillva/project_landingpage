@@ -1,0 +1,36 @@
+@import "../../../src/styles/mixins/colors.scss";
+@import "../../../src/styles/mixins/padding.scss";
+
+
+.container {
+  @include Padding;
+  padding-bottom: 255px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 65px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 22px;
+    opacity: 0.8;
+    margin-bottom: 4rem;
+  }
+
+  h1,
+  p {
+    text-align: center;
+    width: 900px;
+  }
+}
+
+.cards_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 68px;
+
+}
