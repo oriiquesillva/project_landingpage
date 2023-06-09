@@ -1,4 +1,5 @@
 @import "../../../src/styles/mixins/colors.scss";
+@import "../../../src/styles/mixins/responsive.scss";
 
 
 .custom_input{
@@ -14,5 +15,9 @@
 
     & + &{
         margin-top: 25px;
+    }
+
+    @include Mobile {
+        font-size: 15px;
     }
 }

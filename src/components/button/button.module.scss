@@ -1,8 +1,11 @@
-@import "/src/styles/mixins/colors.scss";
+@import "../../../src/styles/mixins/colors.scss";
+@import "../../../src/styles/mixins/responsive.scss";
+
 
 .button {
   font-size: 20px;
-  font-weight: 600;  
+  font-weight: 600; 
+  text-transform: uppercase; 
   padding: 15px 50px;
   border-radius: 5px;
   font-weight: bold;
@@ -26,5 +29,11 @@
     font-weight: 600;
     background-color: $green3-color;
     color: $white-color;
+
+    @include Mobile {
+      font-size: 14px;
+    }
   }
+
+
 }

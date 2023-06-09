@@ -1,5 +1,8 @@
-@import "/src/styles/mixins/colors.scss";
-@import "/src/styles/mixins/padding.scss";
+@import "../../../src//styles/mixins/colors.scss";
+@import "../../../src//styles/mixins/padding.scss";
+@import "../../../src//styles/mixins/responsive.scss";
+
+
 
 .container {
   @include Padding;
@@ -13,6 +16,11 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: space-between;
+
+  @include Mobile{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 .logotipo {
@@ -32,8 +40,16 @@
   a + a {
     margin-left: 38.9px;
   }
+
+  @include Mobile{
+    display: none;
+  }
 }
 
 .action {
   text-align: end;
+
+  @include Mobile{
+    display: none;
+  }
 }

@@ -20,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className={`${saira.variable} ${sairaStencil.variable}`}>
-      <body>{children}</body>
+    <html lang="en" >
+      <body className={`${saira.variable} ${sairaStencil.variable}`} >{children}</body>
     </html>
   )
 }

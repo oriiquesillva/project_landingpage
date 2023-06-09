@@ -1,15 +1,23 @@
-@import "/src/styles/mixins/padding.scss";
+@import "../../../src/styles/mixins/padding.scss";
+@import "../../../src/styles/mixins/responsive.scss";
 
 
 .container {
   @include Padding;
-  height: 100vh;
-  padding-top: 219px;
-  background-image: url("/images/heroBackground.svg");
-  background-repeat: no-repeat;
-  background-size: cover; //rever
+  width: 100%;
+  height: 100%;
+  margin-top: 220px;
+  margin-bottom: 250px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
+  @include Mobile {
+    grid-template-columns: 1fr; 
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
 }
 
@@ -17,14 +25,30 @@
   h1 {
     font-size: 70px;
     font-weight: 600;
+
+    @include Mobile {
+      font-size: 35px;
+    }
   }
 
   p {
     font-size: 30px;
     opacity: 0.8;
+
+    @include Mobile {
+      font-size: 20px;
+      margin-bottom: 2rem;
+    }
   }
 }
 
 .image_container {
   text-align: end;
+
+  @include Mobile {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    display: none;
+  }
 }

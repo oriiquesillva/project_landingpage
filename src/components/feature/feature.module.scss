@@ -1,36 +1,60 @@
 @import "../../../src/styles/mixins/colors.scss";
 @import "../../../src/styles/mixins/padding.scss";
+@import "../../../src/styles/mixins/responsive.scss";
 
 
 .container {
   @include Padding;
-  padding-bottom: 200px;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  
   h1 {
     font-size: 65px;
     font-weight: 600;
+
+    @include Mobile {
+      font-size: 30px;
+    }
+
   }
 
   p {
     font-size: 25px;
     opacity: 0.8;
     margin-bottom: 4rem;
+
+    @include Mobile {
+      font-size: 20px;
+      margin-bottom: 2rem;
+    }
+
   }
 
   h1,
   p {
     text-align: center;
     width: 900px;
+
+    @include Mobile{
+      width: 100%;
+    }
   }
+
 }
 
 .cards_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 68px;
+
+  @include Mobile {
+   grid-template-columns: 1fr; 
+   gap: 32px;
+  }
 
 }

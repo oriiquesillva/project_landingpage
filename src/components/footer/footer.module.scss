@@ -1,12 +1,18 @@
 @import "../../../src//styles//mixins/padding.scss";
 @import "../../../src//styles//mixins/colors.scss";
+@import "../../../src//styles//mixins/responsive.scss";
 
 .container {
   @include Padding;
-  padding-top: 72px;
+  margin-top: 72px;
   background-color: $purple3-color;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
+  @include Mobile {
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+  }
 }
 
 .logotipo {
@@ -17,6 +23,10 @@
   text-decoration: none;
   color: $white-color;
   cursor: pointer;
+
+  @include Mobile {
+    font-size: 25px;
+  }
 }
 
 .footer_column {
@@ -30,29 +40,49 @@
     font-size: 25px;
     font-weight: 400;
     color: $green2-color;
+
+    @include Mobile {
+      font-size: 20px;
+    }
   }
 
   p {
     font-size: 20px;
     font-weight: 200;
     text-transform: uppercase;
+
+    @include Mobile {
+      font-size: 15px;
+    }
+  }
+
+  @include Mobile {
+    margin-top: 0;
   }
 }
 
-.align_right{
-    text-align: right;
+.align_right {
+  text-align: right;
+
+  @include Mobile {
+    text-align: left;
+  }
 }
 
-.social_icons{
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
+.social_icons {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 
-    svg{
-        font-size: 1.5rem;
+  svg {
+    font-size: 1.5rem;
+
+    @include Mobile {
+      font-size: 1.2rem;
+      gap: 30px;
     }
+  }
 }
-
-

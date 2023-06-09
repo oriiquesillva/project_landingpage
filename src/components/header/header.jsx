@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-import Styles from "./header.module.scss";
 import Button from "../button/button";
+import Styles from "./header.module.scss";
+
 
 
 
