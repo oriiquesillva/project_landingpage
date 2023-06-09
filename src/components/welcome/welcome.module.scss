@@ -1,0 +1,30 @@
+@import "/src/styles/mixins/padding.scss";
+
+
+.container {
+  @include Padding;
+  height: 100vh;
+  padding-top: 219px;
+  background-image: url("/images/heroBackground.svg");
+  background-repeat: no-repeat;
+  background-size: cover; //rever
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.text_container {
+  h1 {
+    font-size: 70px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 30px;
+    opacity: 0.8;
+  }
+}
+
+.image_container {
+  text-align: end;
+}
