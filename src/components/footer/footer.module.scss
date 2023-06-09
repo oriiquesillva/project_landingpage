@@ -1,0 +1,58 @@
+@import "../../../src//styles//mixins/padding.scss";
+@import "../../../src//styles//mixins/colors.scss";
+
+.container {
+  @include Padding;
+  padding-top: 72px;
+  background-color: $purple3-color;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.logotipo {
+  font-family: var(--font-saira-stencil);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+  text-decoration: none;
+  color: $white-color;
+  cursor: pointer;
+}
+
+.footer_column {
+  margin-top: 4.5rem;
+
+  &.main_column {
+    margin-top: 0px;
+  }
+
+  h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: $green2-color;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+}
+
+.align_right{
+    text-align: right;
+}
+
+.social_icons{
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+        font-size: 1.5rem;
+    }
+}
+
+
