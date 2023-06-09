@@ -1,0 +1,18 @@
+@import "../../../src/styles/mixins/colors.scss";
+
+
+.custom_input{
+    padding: 22px 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: $gray4-color;
+
+    font-size: 19px;
+    font-weight: lighter;
+    opacity: 0.8;
+    color: $gray5-color;
+
+    & + &{
+        margin-top: 25px;
+    }
+}
