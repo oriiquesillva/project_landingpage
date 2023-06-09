@@ -1,0 +1,39 @@
+@import "/src/styles/mixins/colors.scss";
+@import "/src/styles/mixins/padding.scss";
+
+.container {
+  @include Padding;
+  color: $white-color;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  width: 100%;
+  background-color: $purple-color;
+  border-bottom: 0.5px solid $gray-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logotipo {
+  font-family: var(--font-saira-stencil);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+  text-decoration: none;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+.menu {
+  font-size: 22px;
+  text-transform: uppercase;
+
+  a + a {
+    margin-left: 38.9px;
+  }
+}
+
+.action {
+  text-align: end;
+}
