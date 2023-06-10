@@ -6,16 +6,18 @@
 
 .container {
   @include Padding;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: $white-color;
   padding-top: 34px;
   padding-bottom: 34px;
-  width: 100%;
   background-color: $purple-color;
   border-bottom: 0.5px solid $gray-color;
+
+  @include Mobile {
+    padding: 0.5rem;
+  }
 
 }
 
@@ -27,6 +29,10 @@
   text-decoration: none;
   color: var(--text-white);
   cursor: pointer;
+
+  @include Mobile {
+    font-size: 25px;
+  }
 }
 
 .menu {
@@ -37,8 +43,18 @@
     margin-left: 38.9px;
   }
 
+  @include Mobile {
+    display: none;
+  }
+
 }
 
 .action {
-  text-align: end;
+  width: auto;
+  display: flex;
+  align-items: center;
+
+  @include Mobile {
+    display: none;
+  }
 }

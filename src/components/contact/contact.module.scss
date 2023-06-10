@@ -9,6 +9,12 @@
   justify-content: space-between;
   gap: 50px;
   margin-bottom: 150px;
+
+  @include Mobile {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 75px;
+  }
 }
 
 .text_container {
@@ -21,18 +27,34 @@
     font-size: 30px;
     font-weight: 600;
     color: $green2-color;
+
+    @include Mobile {
+      font-size: 20px;
+    }
   }
 
   h1 {
     font-size: 60px;
     font-weight: bold;
     color: $white-color;
+
+    @include Mobile {
+      font-size: 30px;
+    }
   }
 
   p {
     font-size: 25px;
     font-weight: 300;
     color: $white-color;
+
+    @include Mobile {
+      font-size: 20px;
+    }
+  }
+
+  @include Mobile {
+    width: 100%;
   }
 }
 
@@ -46,10 +68,24 @@
     font-size: 35px;
     font-weight: 600;
     color: $purple-color;
+
+    @include Mobile {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
   }
 
   form {
     display: grid;
     gap: 25px;
+
+    @include Mobile {
+      gap: 15px;
+    }
+  }
+
+  @include Mobile {
+    width: 100%;
+    padding: 1rem;
   }
 }
