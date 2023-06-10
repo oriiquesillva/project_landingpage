@@ -6,21 +6,17 @@
 
 .container {
   @include Padding;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: $white-color;
   padding-top: 34px;
   padding-bottom: 34px;
   width: 100%;
   background-color: $purple-color;
   border-bottom: 0.5px solid $gray-color;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  justify-content: space-between;
 
-  @include Mobile{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
 }
 
 .logotipo {
@@ -41,15 +37,8 @@
     margin-left: 38.9px;
   }
 
-  @include Mobile{
-    display: none;
-  }
 }
 
 .action {
   text-align: end;
-
-  @include Mobile{
-    display: none;
-  }
 }

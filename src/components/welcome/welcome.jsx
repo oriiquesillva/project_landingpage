@@ -13,10 +13,12 @@ export default function Welcome() {
           Somos uma agência de performance digital, aceleramos vendas e
           aquisição de leads para grandes marcas.
         </p>
+        <div className={Styles.action}>
         <Button
           title="AUMENTAR VENDAS"
           kind="secundary"
         />
+        </div>
       </div>
       <div className={Styles.image_container}>
         <Image src={BannerWelcome} alt="Banner Welcome" />

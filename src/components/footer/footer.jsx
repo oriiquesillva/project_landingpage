@@ -23,7 +23,7 @@ export default function Footer() {
             <p>E-books</p>
             <p>Artigos</p>
         </div>
-        <div className={`${Styles.footer_column} ${Styles.align_right}`}>
+        <div className={Styles.footer_column}>
             <h2>SOCIAL</h2>
             <div className={Styles.social_icons}>
                 <Instagram/>
