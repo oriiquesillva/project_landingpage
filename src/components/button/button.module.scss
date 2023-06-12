@@ -15,13 +15,13 @@
   border: none;
 
   &.primary {
-    background-color: $green-color;
-    color: $white-color;
+    background-color: $yellow-color;
+    color: $black-color;
   }
 
   &.secundary {
-    background-color: $white-color;
-    color: $purple-color;
+    background-color: $yellow-color;
+    color: $black-color;
   }
 
   &.full {
@@ -30,7 +30,7 @@
     padding: 21px;
     width: 100%;
     font-weight: 600;
-    background-color: $green3-color;
-    color: $white-color;
+    background-color: $yellow-color;
+    color: $black-color;
   }
 }

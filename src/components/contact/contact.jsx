@@ -4,13 +4,12 @@ import Styles from "./contact.module.scss"
 
 
 
-
 export default function Contact() {
     return(
         <div className={Styles.container}>
             <div className={Styles.text_container}>
-                <span>ENTRE EM CONTATO</span>
-                <h1>Aumente seu resultado de vendas e performance</h1>
+                <span>INSCREVA-SE</span>
+                <h1>Não perca tempo e garanta sua vaga</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
             </div>
             <div className={Styles.form_container}>
