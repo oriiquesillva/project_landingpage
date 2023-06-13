@@ -19,6 +19,15 @@
     margin-bottom: 75px;
   }
 
+  @include Tablet{
+    display: flex;
+    gap: 30px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding-left:2rem;
+    padding-right: 2rem;
+  }
+
 }
 
 .text_container {
@@ -38,6 +47,11 @@
       font-size: 35px;
     }
 
+    @include Tablet{
+      font-size: 40px;
+      gap: 25px;
+    }
+
   }
 
   p {
@@ -49,6 +63,10 @@
     @include Mobile{
       font-size: 20px;
     }
+
+    @include Tablet{
+      font-size: 20px;
+    }
   }
 
 }
@@ -58,6 +76,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+
+  @include Tablet{
+    margin-top: 35px;
+  }
 }
 
 .image_container {
@@ -72,6 +94,11 @@
 
   @include Mobile{
     display: none;
+  }
+
+  @include Tablet{
+    width: 350px;
+    height: 350px;
   }
 
 }

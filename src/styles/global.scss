@@ -1,4 +1,4 @@
-@import "./mixins/colors.scss";
+@import "../styles/mixins/colors.scss";
 
 html,
 body {
@@ -18,4 +18,5 @@ a {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }

@@ -15,6 +15,14 @@
     flex-direction: column;
     margin-bottom: 75px;
   }
+
+  @include Tablet {
+    display: flex;
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+    gap: 10px;
+    margin-bottom: 75px;
+  }
 }
 
 .text_container {
@@ -31,6 +39,10 @@
     @include Mobile {
       font-size: 20px;
     }
+
+    @include Tablet {
+      font-size: 25px;
+    }
   }
 
   h1 {
@@ -40,6 +52,10 @@
 
     @include Mobile {
       font-size: 30px;
+    }
+
+    @include Tablet {
+      font-size: 35px;
     }
   }
 
@@ -51,9 +67,18 @@
     @include Mobile {
       font-size: 20px;
     }
+
+    @include Tablet {
+      font-size: 20px;
+    }
+
   }
 
   @include Mobile {
+    width: 100%;
+  }
+  
+  @include Tablet {
     width: 100%;
   }
 }
@@ -73,6 +98,11 @@
       font-size: 25px;
       margin-bottom: 20px;
     }
+
+    @include Tablet {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
   }
 
   form {
@@ -82,10 +112,19 @@
     @include Mobile {
       gap: 15px;
     }
+
+    @include Tablet {
+      gap: 20px;
+    }
   }
 
   @include Mobile {
     width: 100%;
     padding: 1rem;
+  }
+
+  @include Tablet {
+    width: 100%;
+    padding: 2rem;
   }
 }

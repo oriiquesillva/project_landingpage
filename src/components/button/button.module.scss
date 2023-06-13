@@ -33,4 +33,9 @@
     background-color: $yellow-color;
     color: $black-color;
   }
+
+  @include Tablet {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
 }

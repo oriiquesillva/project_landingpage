@@ -14,6 +14,11 @@
   @include Mobile {
     margin-bottom: 75px;
   }
+
+  @include Tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .text_container{
@@ -32,6 +37,11 @@
       font-size: 35px;
       text-align: left;
     }
+
+    @include Tablet {
+      font-size: 45px;
+      text-align: center;
+    }
   }
 
   p {
@@ -44,7 +54,11 @@
     @include Mobile {
       font-size: 20px;
       text-align: left;
-      
+    }
+
+    @include Tablet {
+      font-size: 23px;
+      text-align: center;
     }
   }
 }
@@ -55,6 +69,11 @@
   gap: 68px;
 
   @include Mobile {
+    grid-template-columns: 1fr  ;
+    gap: 32px;
+  }
+
+  @include Tablet {
     grid-template-columns: 1fr  ;
     gap: 32px;
   }
