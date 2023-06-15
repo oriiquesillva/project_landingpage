@@ -1,3 +1,4 @@
+import Carousel from "@/components/carousel/carousel";
 import Contact from "@/components/contact/contact";
 import Feature from "@/components/feature/feature";
 import Footer from "@/components/footer/footer";
@@ -9,9 +10,10 @@ export default function Home() {
     <>
       <Header />
       <Welcome />
-      <Feature/>
-      <Contact/>
-      <Footer/>
+      <Carousel />
+      <Feature />
+      <Contact />
+      <Footer />
     </>
   );
 }
