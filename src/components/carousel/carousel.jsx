@@ -1,17 +1,27 @@
-"use client"
+"use client";
 
-import Styles from "./carousel.module.scss";
 import { motion } from "framer-motion";
-import CarouselCard from "../carousel_card/carousel_card";
-import { useState, useRef, useEffect} from "react"
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Styles from "./carousel.module.scss";
+
+import image1 from "../../../public/Images/palestra3.jpeg";
+import image2 from "../../../public/Images/palestra3.jpeg";
+import image3 from "../../../public/Images/palestra3.jpeg";
+import image4 from "../../../public/Images/palestra3.jpeg";
+import image5 from "../../../public/Images/palestra3.jpeg";
+import image6 from "../../../public/Images/palestra3.jpeg";
+import image7 from "../../../public/Images/palestra3.jpeg";
+import image8 from "../../../public/Images/palestra3.jpeg";
+
+const images = [image1, image2, image3, image4, image5, image6, image7, image8];
 
 export default function Carousel() {
   const carousel = useRef();
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(0);
   useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth )
-  },[])
-
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+  }, []);
 
   return (
     <div className={Styles.container}>
@@ -32,24 +42,22 @@ export default function Carousel() {
         className={Styles.carousel_wrapper}
         whileTap={{ cursor: "grabbing" }}
         ref={carousel}
-
       >
         <motion.div
           className={Styles.carousel_content}
           drag="x"
-          dragConstraints={{right: 0 , left: -width}}
-          initial={{x: 150}}
-          animate={{x: 0}}
-          transition={{duration: 0.8}}
+          dragConstraints={{ right: 0, left: -width }}
+          initial={{ x: 150 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          <CarouselCard />
-          <CarouselCard />
-          <CarouselCard />
-          <CarouselCard />
-          <CarouselCard />
-          <CarouselCard />
-          <CarouselCard />
-          <CarouselCard />
+          {images.map((image) => (
+            <div className={Styles.carousel_card} key={image}>
+              <div className={Styles.carousel_img}>
+                <Image src={image} />
+              </div>
+            </div>
+          ))}
         </motion.div>
       </motion.div>
     </div>
