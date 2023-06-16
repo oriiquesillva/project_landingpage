@@ -26,16 +26,13 @@ export default function Carousel() {
   return (
     <div className={Styles.container}>
       <div className={Styles.text_container}>
-        <h1>
-          Garanta sua vaga e participe da 1ª palestra sobre liderança e gestão
-          humanizada
-        </h1>
+        <h1>Desperte a Liderança que muda o Jogo</h1>
         <p>
-          A liderança humanizada é um conceito que ganhou força desde que o
-          mundo se viu fragilizado diante dos impactos da pandemia. Como era de
-          se esperar, o ambiente empresarial também sentiu os efeitos, não só
-          por causa das oscilações econômicas, mas também pelo impacto sentido
-          pelas pessoas nesse cenário, diante desse quadro vamos aprender:
+          Somos a JOTACOMVOCÊ uma empresa dedicada a formar líderes e despertar
+          o potencial daqueles que ainda não se veem como líderes. Através de
+          palestras e treinamentos, oferecemos ferramentas e conhecimentos para
+          o desenvolvimento pessoal e profissional, com uma abordagem centrada
+          nas pessoas e na gestão humanizada.
         </p>
       </div>
       <motion.div

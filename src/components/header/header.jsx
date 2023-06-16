@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Button from "../button/button";
 import Styles from "./header.module.scss";
 
 
@@ -15,9 +14,6 @@ export default function Header() {
         <Link href="/">Home</Link>
         <Link href="/">O que fazemos</Link>
         <Link href="/">Cases</Link>
-      </div>
-      <div className={Styles.action}>
-        <Button title={"FALE CONOSCO"}/>
       </div>
     </div>
   );

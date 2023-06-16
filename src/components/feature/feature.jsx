@@ -1,57 +1,50 @@
 import Styles from "./feature.module.scss";
-import { VscGraph as Graph } from "react-icons/vsc";
-import { GiSwordsPower as Power } from "react-icons/gi";
-import { GiGrowth as Growing } from "react-icons/gi"
-import { GiStrong as Strong } from "react-icons/gi"
 import FeatureCard from "../feature_card/feature_card";
+
+import { LuMedal as Medal } from "react-icons/lu";
+import { GiShipWheel as Wheel } from "react-icons/gi"
+import { BsGraphUpArrow as Graph } from "react-icons/bs" ;
+import { GiStrong as Strong } from "react-icons/gi";
+
+
+
 
 export default function Feature() {
   return (
     <div className={Styles.container}>
       <div className={Styles.text_container}>
-        <h1>
-          Garanta sua vaga e participe da 1ª palestra sobre liderança e gestão
-          humanizada
-        </h1>
+        <h1>A Jornada do Empreendedor de Sucesso: Inscreva-se e Participe</h1>
         <p>
-          A liderança humanizada é um conceito que ganhou força desde que o
-          mundo se viu fragilizado diante dos impactos da pandemia. Como era de
-          se esperar, o ambiente empresarial também sentiu os efeitos, não só
-          por causa das oscilações econômicas, mas também pelo impacto sentido
-          pelas pessoas nesse cenário, diante desse quadro vamos aprender:
+          Participe da palestra 'Jornada do Empreendedor de Sucesso' no dia
+          07/07 e descubra as chaves para alcançar o sucesso empreendedor. Nesta
+          palestra inspiradora e repleta de insights valiosos, você terá a
+          oportunidade de aprender com histórias reais e experiências
+          compartilhadas por empreendedores bem-sucedidos. Durante a palestra,
+          exploraremos estratégias comprovadas, dicas práticas e conceitos-chave
+          para ajudá-lo a trilhar seu próprio caminho rumo ao sucesso
+          empreendedor, veja alguns tópicos que serão abordados na palestra:
         </p>
       </div>
       <div className={Styles.cards_container}>
         <FeatureCard
-          icon={<Power />}
-          title={"Engajamento e empoderamento"}
-          text={`No contexto profissional, por exemplo, esses temas tem o potencial de motivar a equipe. Um líder que acredita nisso e delega responsabilidades costuma despertar
-            nos seus liderados o espírito colaborativo.`}
+          icon={<Medal />}
+          title={"Sucesso empreendedor"}
+          text={`Descubra o segredo do empreendedor de sucesso: inspirado em histórias reais, trajetórias incríveis e a determinação de trilhar um caminho único para o sucesso.`}
         />
         <FeatureCard
-          icon={<Growing />}
-          title={"Desenvolvimento pessoal"}
-          text={
-            `Processo constante e progressivo, que exige investimento de tempo e de energia. Não acontece do dia para a noite mas 
-            quando alcançado, o retorno extremamente benéfico.`
-          }
-        />
-        <FeatureCard
-          icon={<Strong />}
-          title={"Fortalecimento da marca"}
-          text={
-            `O tempo em que uma boa empresa era medida somente por seus resultados já passou. Hoje, a cultura organizacional e as relações de trabalho,
-            também são fatores de extrema importância durante a avaliação de qualquer negócio.`
-          }
+          icon={<Wheel />}
+          title={"Descobrindo seu talento"}
+          text={`Descubra suas paixões, habilidades e interesses, e transforme-as em oportunidades de empreendedorismo. Aprenda a explorar diversos campos de atuação até encontrar um mercado que ressoe com você. `}
         />
         <FeatureCard
           icon={<Graph />}
-          title={"Melhorar produtividade"}
-          text={
-            `O maior ganho que uma empresa pode ter após adotar uma gestão humanitária é o aumento da produtividade.
-            Afinal, com boas condições de trabalho e níveis elevados de satisfação, os liderados se sentem mais motivados 
-            a trabalhar.`
-          }
+          title={"Planejamento estratégico"}
+          text={`Esse pilar é fundamental para impulsionar o crescimento e a vantagem competitiva. Seu sucesso depende do planejamento estratégico, da análise de mercado, da identificação do seu público-alvo, do modelo de negócio e da compreensão da concorrência.`}
+        />
+        <FeatureCard
+          icon={<Strong />}
+          title={"Perfil empreendedor"}
+          text={`Desenvolva habilidades essenciais, utilize ferramentas para aprimorar suas habilidades empreendedoras e inspire-se em cases de sucesso para alcançar seus objetivos.`}
         />
       </div>
     </div>

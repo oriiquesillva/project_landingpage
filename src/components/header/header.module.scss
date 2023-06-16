@@ -61,16 +61,3 @@
 
 }
 
-.action {
-  width: auto;
-  display: flex;
-  align-items: center;
-
-  @include Mobile {
-    display: none;
-  }
-
-  @include Tablet {
-    width: auto;
-  }
-}
