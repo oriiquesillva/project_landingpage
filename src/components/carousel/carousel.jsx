@@ -5,16 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Styles from "./carousel.module.scss";
 
-import image1 from "../../../public/Images/palestra3.jpeg";
-import image2 from "../../../public/Images/palestra3.jpeg";
+import image1 from "../../../public/Images/palestra1.jpeg";
+import image2 from "../../../public/Images/palestra2.jpeg";
 import image3 from "../../../public/Images/palestra3.jpeg";
-import image4 from "../../../public/Images/palestra3.jpeg";
-import image5 from "../../../public/Images/palestra3.jpeg";
-import image6 from "../../../public/Images/palestra3.jpeg";
-import image7 from "../../../public/Images/palestra3.jpeg";
-import image8 from "../../../public/Images/palestra3.jpeg";
+import image4 from "../../../public/Images/palestra4.jpeg";
+import image5 from "../../../public/Images/palestra5.jpeg";
+import image6 from "../../../public/Images/palestra6.jpeg";
 
-const images = [image1, image2, image3, image4, image5, image6, image7, image8];
+const images = [image1, image2, image3, image4, image5, image6];
 
 export default function Carousel() {
   const carousel = useRef();
@@ -48,10 +46,10 @@ export default function Carousel() {
           animate={{ x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {images.map((image) => (
-            <div className={Styles.carousel_card} key={image}>
+          {images.map((image, index) => (
+            <div className={Styles.carousel_card} key={index}>
               <div className={Styles.carousel_img}>
-                <Image src={image} />
+                <Image src={image} alt="Foto do evento" />
               </div>
             </div>
           ))}

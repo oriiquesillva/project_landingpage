@@ -82,6 +82,18 @@
     }
   }
 
+  svg {
+    font-size: 1.5rem;
+
+    @include Mobile {
+      font-size: 1.3rem;
+    }
+
+    @include Tablet {
+      font-size: 1.3rem;
+    }
+  }
+
   @include Mobile {
     gap: 15px;
     margin-top: 35px;
@@ -94,20 +106,8 @@
   
 }
 
-.social_icons {
+.dflex{
   display: flex;
-  align-items: center;
-  gap: 20px;
-
-  svg {
-    font-size: 1.5rem;
-
-    @include Mobile {
-      font-size: 1.3rem;
-    }
-
-    @include Tablet {
-      font-size: 1.3rem;
-    }
-  }
+  flex-direction: row;
+  gap: 30px;
 }

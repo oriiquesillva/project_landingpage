@@ -13,7 +13,7 @@ export default function Header() {
       <div className={Styles.menu}>
         <Link href="/">Home</Link>
         <Link href="/">O que fazemos</Link>
-        <Link href="/">Cases</Link>
+        <Link href="/">Sobre</Link>
       </div>
     </div>
   );

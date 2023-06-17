@@ -16,7 +16,7 @@ export async function POST(request) {
       text: message_data,
       from: "lsillva.teste@gmail.com ",
       to: "lsillva.teste@gmail.com",
-      subject: "testing emailjs",
+      subject: "Dados do inscrito",
     });
     return NextResponse.json({message: "Inscrição efetuada com sucesso"})
   } catch (err) {

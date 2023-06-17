@@ -42,7 +42,11 @@ export default function Contact() {
     setLoading(true);
     axios
       .post("/api/", {
-        message_data: `Nome: ${values.name}, Email: ${values.email}, Telefone: ${values.telefone} `,
+        message_data:  `
+        Nome: ${values.name}, 
+        Email: ${values.email}, 
+        Telefone: ${values.telefone} 
+        `
       })
       .then(() => {
         formik.resetForm();

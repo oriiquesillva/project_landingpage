@@ -10,26 +10,17 @@ export default function Footer() {
        <div className={Styles.container}>
         <div className={ `${Styles.footer_column} ${Styles.main_column}`}>
             <h1 className={Styles.logotipo}>JOTACOMVOCÊ</h1>
-            <p>0800 800 800</p>
             <p>jottacomvoce@gmail.com</p>
         </div>
-        <div className={Styles.footer_column}>
-            <h2>MENU</h2>
+        <div className={ `${Styles.footer_column} ${Styles.dflex}`}>
+            <p>Home</p>
             <p>Quem somos</p>
             <p>Cases</p>
         </div>
-        <div className={Styles.footer_column}>
-            <h2>CONTEUDO</h2>
-            <p>E-books</p>
-            <p>Artigos</p>
-        </div>
-        <div className={Styles.footer_column}>
-            <h2>SOCIAL</h2>
-            <div className={Styles.social_icons}>
+        <div className={`${Styles.footer_column} ${Styles.dflex}`}>
                 <Instagram/>
                 <Whatsapp/>
                 <Youtube/>
-            </div>
         </div>
        </div>
     )
