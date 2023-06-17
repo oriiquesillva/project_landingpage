@@ -4,11 +4,13 @@
 
 .container {
   @include Padding;
+  padding-top: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
   margin-bottom: 150px;
+  position: relative;
 
   @include Mobile {
     display: flex;

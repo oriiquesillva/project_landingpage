@@ -1,61 +1,117 @@
-"use client"
+"use client";
+import Styles from "./contact.module.scss";
 import axios from "axios";
+import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import Button from "../button/button";
 import Input from "../input/input";
-import Styles from "./contact.module.scss";
-import { useState } from "react";
+import { Loading } from "../loading/loading";
+import { SuccessModal } from "../sucess_modal/sucess_modal";
+import { FailModal } from "../fail_modal/fail_modal";
 
 export default function Contact() {
-  const [nome, setNome] = useState(null)
-  const [email, setEmail] = useState(null)
-  const [telefone, setTelefone] = useState(null)
+  const [loading, setLoading] = useState(false);
+  const [sucessModal, setSucessModal] = useState(false);
+  const [failModal, setFailModal] = useState(false);
 
-  console.log(nome, email, telefone);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      telefone: "",
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required("O campo nome é obrigatório"),
+      email: Yup.string()
+        .email("O endereço de email informado não é valido")
+        .required("O campo email é obrigatório"),
+      telefone: Yup.string()
+        .matches(
+          "",
+          "O telefone informado não é válido, informe um numero válido"
+        )
+        .required("O campo telefone é obrigatório"),
+    }),
+    validateOnChange: false,
+    validateOnBlur: false,
+    onSubmit: (values) => handleSubmitForm(values),
+  });
 
-
-  const SendMail = () => {
+  const handleSubmitForm = (values) => {
+    setLoading(true);
     axios
-      .post("/api/", {message_data: `Nome: ${nome}, Email: ${email}, Telefone: ${telefone} `})
-      .then(() => console.log("uhull"))
-      .catch(() => console.log("Ooops"));
+      .post("/api/", {
+        message_data: `Nome: ${values.name}, Email: ${values.email}, Telefone: ${values.telefone} `,
+      })
+      .then(() => {
+        formik.resetForm();
+        setLoading(false);
+        setSucessModal(true)
+      })
+      .catch(() => {
+        setLoading(false);
+        setFailModal(true)
+      });
   };
 
-  
+  const handleCloseModal = () => {
+    setFailModal(false)
+    setSucessModal(false)
+  }
+
   return (
-    <div className={Styles.container}>
-      <div className={Styles.text_container}>
-        <h1>Não perca tempo e garanta sua vaga</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna
-        </p>
-      </div>
-      <div className={Styles.form_container}>
-        <h1>Inscreva-se</h1>
-        <form>
-          <Input
-           type="text" 
-           placeholder="Nome completo" 
-           onBlur={(e) => setNome(e.target.value)}
-           required 
-           />
+    <>
+      {sucessModal && <SuccessModal closeModal={handleCloseModal}/>}
+      {failModal && <FailModal closeModal={handleCloseModal}/>}
+      {loading && <Loading />}
+      <div className={Styles.container} id="contact">
+        <div className={Styles.text_container}>
+          <h1>Não perca tempo e garanta sua vaga</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna
+          </p>
+        </div>
+        <div className={Styles.form_container}>
+          <h1>Inscreva-se</h1>
+          <form id="formulario" onSubmit={formik.handleSubmit}>
+            <Input
+              id="name"
+              name="name"
+              type="text"
+              value={formik.values.name}
+              placeholder="Nome completo"
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              required
+            />
 
-          <Input
-           type="email" 
-           placeholder="Digite seu email" 
-           onBlur={(e) => setEmail(e.target.value)}
-           required 
-           />
+            <Input
+              id="email"
+              name="email"
+              type="email"
+              value={formik.values.email}
+              placeholder="Digite seu email"
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              required
+            />
 
-          <Input
-            type="text"
-            placeholder="Celular / Whatsapp"
-            onBlur={(e) => setTelefone(e.target.value)}
-            required
-          />
-          <Button title={"Garanta sua vaga"} kind={"full"} onClick={SendMail} />
-        </form>
+            <Input
+              id="telefone"
+              name="telefone"
+              type="text"
+              value={formik.values.telefone}
+              placeholder="Celular / Whatsapp"
+              onBlur={formik.handleBlur}
+              onChange={formik.handleChange}
+              required
+            />
+            <Button type="submit" title={"Garanta sua vaga"} kind={"full"} />
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -14,7 +14,7 @@ const Button = ({ title, kind, onClick, type }) => {
     <button
       type={type}
       className={`${Styles.button} ${changeButtonClass()}`}
-      onClick={() => onClick()}
+      onClick={onClick}
     >
       {title}
     </button>

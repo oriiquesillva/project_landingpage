@@ -1,7 +1,10 @@
+"use client"
+
 import Styles from "./welcome.module.scss";
 import Button from "../button/button";
 import BannerWelcome from "/public/images/profile.jpeg";
 import Image from "next/image";
+import { scrollTo } from "@/utils/scrollTo";
 
 export default function Welcome() {
   return (
@@ -17,7 +20,7 @@ export default function Welcome() {
           voltadas ao combate à fome.
         </p>
         <div className={Styles.action}>
-          <Button title="INSCREVA-SE" kind="secundary" />
+          <Button title="INSCREVA-SE" kind="secundary" onClick={() => scrollTo("contact")} />
         </div>
       </div>
       <div className={Styles.image_container}>
