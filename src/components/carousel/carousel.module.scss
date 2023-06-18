@@ -9,13 +9,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 150px;
+  margin-bottom: 75px;
 
   @include Mobile {
     margin-bottom: 75px;
   }
 
   @include Tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @include Laptop {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -39,7 +44,12 @@
     }
 
     @include Tablet {
-      font-size: 45px;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    @include Laptop {
+      font-size: 55px;
       text-align: center;
     }
   }
@@ -52,12 +62,17 @@
     margin-bottom: 4rem;
 
     @include Mobile {
-      font-size: 20px;
-      text-align: left;
+      font-size: 15px;
+      text-align: justify;
     }
 
     @include Tablet {
-      font-size: 23px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    @include Laptop {
+      font-size: 25px;
       text-align: center;
     }
   }
@@ -74,7 +89,6 @@
 .carousel_content{
   display: inline-flex;
   gap: 30px;
-
 }
 
 .carousel_card {
@@ -84,6 +98,11 @@
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   pointer-events: none;
+
+  @include Mobile {
+    width: 400px;
+    height: 250px;
+  }
 }
 
 .carousel_img{

@@ -13,17 +13,22 @@
   position: relative;
 
   @include Mobile {
-    display: flex;
     flex-direction: column;
     margin-bottom: 75px;
   }
 
   @include Tablet {
-    display: flex;
-    padding-left: 2rem ;
-    padding-right: 2rem ;
+    padding-left: 1rem ;
+    padding-right: 1rem ;
     gap: 10px;
     margin-bottom: 75px;
+  }
+  
+  @include Laptop {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 75px;
+    gap: 30px;
   }
 }
 
@@ -46,6 +51,10 @@
     @include Tablet {
       font-size: 35px;
     }
+
+    @include Laptop {
+      font-size: 50px;
+    }
   }
 
   p {
@@ -54,11 +63,16 @@
     color: $white-color;
 
     @include Mobile {
-      font-size: 20px;
+      font-size: 15px;
+      text-align: justify;
     }
 
     @include Tablet {
       font-size: 20px;
+    }
+
+    @include Laptop {
+      font-size: 25px;
     }
 
   }
@@ -70,6 +84,12 @@
   @include Tablet {
     width: 100%;
   }
+
+  @include Laptop {
+    width: 100%;
+  }
+
+
 }
 
 .form_container {
@@ -79,7 +99,7 @@
   background-color: $white-color;
 
   h1 {
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 600;
     color: $black-color;
     padding-bottom: 30px;
@@ -91,6 +111,11 @@
 
     @include Tablet {
       font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include Laptop {
+      font-size: 35px;
       margin-bottom: 20px;
     }
   }
@@ -106,6 +131,10 @@
     @include Tablet {
       gap: 20px;
     }
+
+    @include Laptop {
+      gap: 20px;
+    }
   }
 
   @include Mobile {
@@ -116,5 +145,10 @@
   @include Tablet {
     width: 100%;
     padding: 2rem;
+  }
+
+  @include Laptop {
+    width: 100%;
+    padding: 3rem;
   }
 }
