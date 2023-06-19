@@ -1,5 +1,7 @@
+"use client"
 import Link from "next/link";
 import Styles from "./header.module.scss";
+import { scrollTo } from "@/utils/scrollTo";
 
 
 
@@ -11,9 +13,9 @@ export default function Header() {
         JOTACOMVOCÊ
       </a>
       <div className={Styles.menu}>
-        <Link href="/">Home</Link>
-        <Link href="/">O que fazemos</Link>
-        <Link href="/">Sobre</Link>
+        <span onClick={() => scrollTo("home")}>Home</span>
+        <span onClick={() => scrollTo("carousel")}>O que fazemos</span>
+        <span onClick={() => scrollTo("about")}>Sobre</span>
       </div>
     </div>
   );

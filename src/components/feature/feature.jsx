@@ -11,7 +11,7 @@ import { GiStrong as Strong } from "react-icons/gi";
 
 export default function Feature() {
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="about">
       <div className={Styles.text_container}>
         <h1>A Jornada do Empreendedor de Sucesso: Inscreva-se e Participe</h1>
         <p>

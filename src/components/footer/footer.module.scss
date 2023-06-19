@@ -79,10 +79,11 @@
     }
   }
 
-  p {
+  span {
     font-size: 20px;
     font-weight: 200;
     text-transform: uppercase;
+    cursor: pointer;
 
     @include Mobile {
       font-size: 15px;

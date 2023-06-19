@@ -22,7 +22,7 @@ export default function Carousel() {
   }, []);
 
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="carousel">
       <div className={Styles.text_container}>
         <h1>Desperte a Liderança que muda o Jogo</h1>
         <p>

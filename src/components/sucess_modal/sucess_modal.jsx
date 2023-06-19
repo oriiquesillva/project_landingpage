@@ -8,7 +8,7 @@ export function SuccessModal({ closeModal }) {
     <div className={styles.overlay} onClick={closeModal}>
       <div className={styles.modalContainer}>
         <FiCheckCircle />
-        <p>Email enviado com sucesso!</p>
+        <p>Dados enviados com sucesso, você será redirecionado para a página de pagamento.</p>
         <div className={styles.okButtonContainer} onClick={closeModal}>
           <Button title="fechar" />
         </div>
