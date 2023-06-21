@@ -9,11 +9,14 @@ import Input from "../input/input";
 import { Loading } from "../loading/loading";
 import { SuccessModal } from "../sucess_modal/sucess_modal";
 import { FailModal } from "../fail_modal/fail_modal";
+import { useRouter } from "next/navigation";
+import { BiSolidMapPin as Map } from "react-icons/bi";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [sucessModal, setSucessModal] = useState(false);
   const [failModal, setFailModal] = useState(false);
+  const router = useRouter();
 
   const formik = useFormik({
     initialValues: {
@@ -42,32 +45,38 @@ export default function Contact() {
     setLoading(true);
     axios
       .post("/api/", {
-        message_data:  `
+        message_data: `
         Nome: ${values.name}, 
         Email: ${values.email}, 
         Telefone: ${values.telefone} 
-        `
+        `,
       })
       .then(() => {
         formik.resetForm();
         setLoading(false);
-        setSucessModal(true)
+        setSucessModal(true);
       })
       .catch(() => {
         setLoading(false);
-        setFailModal(true)
+        setFailModal(true);
       });
   };
 
-  const handleCloseModal = () => {
-    setFailModal(false)
-    setSucessModal(false)
-  }
+  const handleCloseSucessModal = () => {
+    setSucessModal(false);
+    router.push(
+      "https://organizador.sympla.com.br/evento/preview/677b38703f4c0704c934a8c1c0b3535d"
+    );
+  };
+
+  const handleCloseFailModal = () => {
+    setFailModal(false);
+  };
 
   return (
     <>
-      {sucessModal && <SuccessModal closeModal={handleCloseModal}/>}
-      {failModal && <FailModal closeModal={handleCloseModal}/>}
+      {sucessModal && <SuccessModal closeModal={handleCloseSucessModal} />}
+      {failModal && <FailModal closeModal={handleCloseFailModal} />}
       {loading && <Loading />}
       <div className={Styles.container} id="contact">
         <div className={Styles.text_container}>
@@ -76,6 +85,7 @@ export default function Contact() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna
           </p>
+          <Button title={"Ver no mapa"}/>
         </div>
         <div className={Styles.form_container}>
           <h1>Inscreva-se</h1>

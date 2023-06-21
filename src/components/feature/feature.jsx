@@ -2,12 +2,9 @@ import Styles from "./feature.module.scss";
 import FeatureCard from "../feature_card/feature_card";
 
 import { LuMedal as Medal } from "react-icons/lu";
-import { GiShipWheel as Wheel } from "react-icons/gi"
-import { BsGraphUpArrow as Graph } from "react-icons/bs" ;
+import { GiShipWheel as Wheel } from "react-icons/gi";
+import { BsGraphUpArrow as Graph } from "react-icons/bs";
 import { GiStrong as Strong } from "react-icons/gi";
-
-
-
 
 export default function Feature() {
   return (
@@ -15,14 +12,14 @@ export default function Feature() {
       <div className={Styles.text_container}>
         <h1>A Jornada do Empreendedor de Sucesso: Inscreva-se e Participe</h1>
         <p>
-          Participe da palestra 'Jornada do Empreendedor de Sucesso' no dia
-          07/07 e descubra as chaves para alcançar o sucesso empreendedor. Nesta
-          palestra inspiradora e repleta de insights valiosos, você terá a
-          oportunidade de aprender com histórias reais e experiências
-          compartilhadas por empreendedores bem-sucedidos. Durante a palestra,
-          exploraremos estratégias comprovadas, dicas práticas e conceitos-chave
-          para ajudá-lo a trilhar seu próprio caminho rumo ao sucesso
-          empreendedor, veja alguns tópicos que serão abordados na palestra:
+          Participe da palestra 'Jornada do Empreendedor de Sucesso'e descubra
+          as chaves para alcançar o sucesso empreendedor. Nesta palestra
+          inspiradora e repleta de insights valiosos, você terá a oportunidade
+          de aprender com histórias reais e experiências compartilhadas por
+          empreendedores bem-sucedidos. Durante a palestra, exploraremos
+          estratégias comprovadas, dicas práticas e conceitos-chave para
+          ajudá-lo a trilhar seu próprio caminho rumo ao sucesso empreendedor,
+          veja alguns tópicos que serão abordados na palestra:
         </p>
       </div>
       <div className={Styles.cards_container}>

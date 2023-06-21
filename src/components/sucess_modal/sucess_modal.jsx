@@ -3,6 +3,7 @@ import Button from "../button/button";
 import styles from "./sucess_modal.module.scss";
 
 
+
 export function SuccessModal({ closeModal }) {
   return (
     <div className={styles.overlay} onClick={closeModal}>
@@ -10,7 +11,7 @@ export function SuccessModal({ closeModal }) {
         <FiCheckCircle />
         <p>Dados enviados com sucesso, você será redirecionado para a página de pagamento.</p>
         <div className={styles.okButtonContainer} onClick={closeModal}>
-          <Button title="fechar" />
+          <Button title="fechar"  />
         </div>
       </div>
     </div>

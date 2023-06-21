@@ -2,7 +2,7 @@
 import Styles from "./button.module.scss";
 
 
-const Button = ({ title, kind, onClick, type }) => {
+const Button = ({ icon, title, kind, onClick, type }) => {
   const changeButtonClass = () => {
     if (kind === "secundary") return Styles.secundary;
     if (kind === "full") return Styles.full;
@@ -16,6 +16,7 @@ const Button = ({ title, kind, onClick, type }) => {
       className={`${Styles.button} ${changeButtonClass()}`}
       onClick={onClick}
     >
+      {icon}
       {title}
     </button>
   );
