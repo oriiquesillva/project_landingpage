@@ -65,13 +65,17 @@ export default function Contact() {
   const handleCloseSucessModal = () => {
     setSucessModal(false);
     router.push(
-      "https://organizador.sympla.com.br/evento/preview/677b38703f4c0704c934a8c1c0b3535d"
+      "https://www.sympla.com.br/evento/a-jornada-do-empreendedor-de-sucesso/2042124"
     );
   };
 
   const handleCloseFailModal = () => {
     setFailModal(false);
   };
+
+  const handleShowMap = () => {
+    router.push("https://www.google.com/maps/place/CEO+Salvador+Shopping/@-12.9793474,-38.4520312,17z/data=!3m1!4b1!4m6!3m5!1s0x7161b1ea71bde67:0x36393ee2caf69bb0!8m2!3d-12.9793474!4d-38.4520312!16s%2Fg%2F11b6z13c6h?entry=ttu")
+  }
 
   return (
     <>
@@ -82,10 +86,10 @@ export default function Contact() {
         <div className={Styles.text_container}>
           <h1>Não perca tempo e garanta sua vaga</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna
+            A palestra ocorrerá no dia 13/07 às 19 horas, no edifício CEO
+            Salvador Shopping na cidade de Salvador, BA, as vagas são limitadas.
           </p>
-          <Button title={"Ver no mapa"}/>
+          <Button title={"Ver no mapa"} onClick={handleShowMap} />
         </div>
         <div className={Styles.form_container}>
           <h1>Inscreva-se</h1>

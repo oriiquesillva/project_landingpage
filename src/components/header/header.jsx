@@ -8,7 +8,7 @@ import { scrollTo } from "@/utils/scrollTo";
 
 export default function Header() {
   return (
-    <div className={Styles.container}>
+    <div className={Styles.container} id="home">
       <a className={Styles.logotipo}>
         JOTACOMVOCÊ
       </a>

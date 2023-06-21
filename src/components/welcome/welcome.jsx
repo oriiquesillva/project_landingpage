@@ -8,7 +8,7 @@ import { scrollTo } from "@/utils/scrollTo";
 
 export default function Welcome() {
   return (
-    <div className={Styles.container} id="home">
+    <div className={Styles.container} >
       <div className={Styles.text_container}>
         <h1>Liderança que transcende o jogo</h1>
         <p>

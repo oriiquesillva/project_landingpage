@@ -12,7 +12,7 @@ export default function Feature() {
       <div className={Styles.text_container}>
         <h1>A Jornada do Empreendedor de Sucesso: Inscreva-se e Participe</h1>
         <p>
-          Participe da palestra 'Jornada do Empreendedor de Sucesso'e descubra
+          Participe da palestra 'A Jornada do Empreendedor de Sucesso' e descubra
           as chaves para alcançar o sucesso empreendedor. Nesta palestra
           inspiradora e repleta de insights valiosos, você terá a oportunidade
           de aprender com histórias reais e experiências compartilhadas por
