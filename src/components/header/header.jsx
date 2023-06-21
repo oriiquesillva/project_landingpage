@@ -1,5 +1,5 @@
 "use client"
-import Link from "next/link";
+
 import Styles from "./header.module.scss";
 import { scrollTo } from "@/utils/scrollTo";
 
