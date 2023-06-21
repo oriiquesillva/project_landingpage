@@ -14,9 +14,9 @@ export async function POST(request) {
   try {
     const message = await client.sendAsync({
       text: message_data,
-      from: "lsillva.teste@gmail.com ",
-      to: "lsillva.teste@gmail.com",
-      subject: "Dados do inscrito",
+      from: "eventos.jotacomvoce@gmail.com",
+      to: "eventos.jotacomvoce@gmail.com",
+      subject: "Inscrição A Jornada do empreendedor de sucesso",
     });
     return NextResponse.json({message: "Inscrição efetuada com sucesso"})
   } catch (err) {
