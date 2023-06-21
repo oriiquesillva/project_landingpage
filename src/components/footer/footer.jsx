@@ -20,13 +20,13 @@ export default function Footer() {
         <span onClick={() => scrollTo("about")}>Sobre</span>
       </div>
       <div className={`${Styles.footer_column} ${Styles.dflex}`}>
-        <Link href="https://instagram.com/jotacomvoce?igshid=MmIzYWVlNDQ5Yg==">
+        <Link href="https://instagram.com/jotacomvoce?igshid=MmIzYWVlNDQ5Yg==" target="_blank">
           <Instagram />
         </Link>
-        <Link href="https://wa.me/message/4C7NU6WCGZRRO1">
+        <Link href="https://wa.me/message/4C7NU6WCGZRRO1" target="_blank">
           <Whatsapp />
         </Link>
-        <Link href="https://www.youtube.com/@jotacomvoce">
+        <Link href="https://www.youtube.com/@jotacomvoce" target="_blank">
           <Youtube />
         </Link>
       </div>

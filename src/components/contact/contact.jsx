@@ -1,16 +1,16 @@
 "use client";
-import Styles from "./contact.module.scss";
 import axios from "axios";
-import { useState } from "react";
 import { useFormik } from "formik";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import * as Yup from "yup";
 import Button from "../button/button";
+import { FailModal } from "../fail_modal/fail_modal";
 import Input from "../input/input";
 import { Loading } from "../loading/loading";
 import { SuccessModal } from "../sucess_modal/sucess_modal";
-import { FailModal } from "../fail_modal/fail_modal";
-import { useRouter } from "next/navigation";
-import { BiSolidMapPin as Map } from "react-icons/bi";
+import Styles from "./contact.module.scss";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -73,9 +73,6 @@ export default function Contact() {
     setFailModal(false);
   };
 
-  const handleShowMap = () => {
-    router.push("https://www.google.com/maps/place/CEO+Salvador+Shopping/@-12.9793474,-38.4520312,17z/data=!3m1!4b1!4m6!3m5!1s0x7161b1ea71bde67:0x36393ee2caf69bb0!8m2!3d-12.9793474!4d-38.4520312!16s%2Fg%2F11b6z13c6h?entry=ttu")
-  }
 
   return (
     <>
@@ -89,7 +86,10 @@ export default function Contact() {
             A palestra ocorrerá no dia 13/07 às 19 horas, no edifício CEO
             Salvador Shopping na cidade de Salvador, BA, as vagas são limitadas.
           </p>
-          <Button title={"Ver no mapa"} onClick={handleShowMap} />
+          <Link href="https://www.google.com/maps/place/CEO+Salvador+Shopping/@-12.9793474,-38.4520312,17z/data=!3m1!4b1!4m6!3m5!1s0x7161b1ea71bde67:0x36393ee2caf69bb0!8m2!3d-12.9793474!4d-38.4520312!16s%2Fg%2F11b6z13c6h?entry=ttu" target="_blank">
+          <Button title={"Ver no mapa"}/>
+          </Link>
+
         </div>
         <div className={Styles.form_container}>
           <h1>Inscreva-se</h1>
