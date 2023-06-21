@@ -2,7 +2,7 @@
 
 import Styles from "./welcome.module.scss";
 import Button from "../button/button";
-import BannerWelcome from "/public/images/profile.jpeg";
+import Profile from "../../../public/Images/profile.jpeg";
 import Image from "next/image";
 import { scrollTo } from "@/utils/scrollTo";
 
@@ -25,7 +25,7 @@ export default function Welcome() {
       </div>
       <div className={Styles.image_container}>
         <div className={Styles.image_content}>
-          <Image src={BannerWelcome} alt="Banner Welcome" />
+          <Image src={Profile} alt="Profile Image" />
         </div>
       </div>
     </div>
