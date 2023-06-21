@@ -12,7 +12,7 @@ export default function Footer() {
     <div className={Styles.container}>
       <div className={`${Styles.footer_column} ${Styles.main_column}`} >
         <h1 className={Styles.logotipo} onClick={() => scrollTo("home")} >JOTACOMVOCÊ</h1>
-        <span>jottacomvoce@gmail.com</span>
+        <span>jotacomvoce@gmail.com</span>
       </div>
       <div className={`${Styles.footer_column} ${Styles.dflex}`}>
         <span onClick={() => scrollTo("home")}>Home</span>
